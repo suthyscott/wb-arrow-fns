@@ -88,15 +88,21 @@ const animalCount = {
 // Use object destructuring syntax to create variables for each of the properties of the
 // animalCount object.
 
-// REPLACE THIS WITH YOUR CODE
+const {cats, dogs, mice} = animalCount
 
 /// /////// PROBLEM 6 //////////
-
+// TODO reeeeeally poorly worded
 // Create an object literal to assign variables a value through destructuring.
 // These variables should be: students, mentors and instructors.
 // Set the value of students to be 24, mentors to be 3, and instructors to be 5.
 
-// REPLACE THIS WITH YOUR CODE
+const obj = {
+  students: 24,
+  mentors: 3,
+  instructors: 5
+}
+
+const {students, mentors, instructors} = obj
 
 /// /////// PROBLEM 7 //////////
 
