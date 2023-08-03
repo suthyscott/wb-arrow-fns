@@ -110,7 +110,13 @@ const {students, mentors, instructors} = obj
 // Give these properties the value true if you speak the language or false if you do not
 // Use destructuring to assign the values of these properties to new variables
 
-// REPLACE THIS WITH YOUR CODE
+const languages = {
+  french: false,
+  english: true,
+  spanish: false
+}
+
+const { french, english, spanish} = languages
 
 /// /////// PROBLEM 8 //////////
 
@@ -120,7 +126,10 @@ const {students, mentors, instructors} = obj
 // new variables.
 // Subtract num2 from num1 and return the result
 
-// REPLACE THIS WITH YOUR CODE
+function subtraction(obj){
+  const {num1, num2} = obj 
+  return num1 - num2
+}
 
 /// /////// PROBLEM 9 //////////
 
@@ -129,7 +138,10 @@ const {students, mentors, instructors} = obj
 // The values of these properties will be a number representing the count of that animal in the zoo
 // Using object destructuring, return the total sum of the counts of these animals
 
-// REPLACE THIS WITH YOUR CODE
+function zooAnimals(obj){
+  const {lion, tiger, bear} = obj
+  return lion + tiger + bear
+}
 
 /// /////// PROBLEM 10 //////////
 
@@ -158,7 +170,9 @@ const {students, mentors, instructors} = obj
 // Title and name in this sentence should be replaced with the values of the
 // destructured object variables.
 
-// REPLACE THIS WITH YOUR CODE
+function greeting({name, title}){
+  return `Hello, ${title} ${name}!`
+}
 
 /// /////// PROBLEM 11 //////////
 
@@ -166,7 +180,9 @@ const {students, mentors, instructors} = obj
 // parameter. The properties of this object will be number and string. One of these
 // properties will be truthy and the other will be falsy Return the value that is truthy.
 
-// REPLACE THIS WITH YOUR CODE
+function truthyFalsy({number, string}){
+  return number ? number: string
+}
 
 /// /////// PROBLEM 12 //////////
 
@@ -179,7 +195,8 @@ const {students, mentors, instructors} = obj
 // final solution
 // Your function should also be contained within a single line
 
-// REPLACE THIS WITH YOUR CODE
+const isGreaterThanTwenty = par => par > 20 ? true : false
+
 
 /// /////// PROBLEM 13 //////////
 
@@ -189,7 +206,7 @@ const {students, mentors, instructors} = obj
 // final solution
 // Your function should also be contained within a single line
 
-// REPLACE THIS WITH YOUR CODE
+const seven = () => 7
 
 /// /////// PROBLEM 14 //////////
 
@@ -204,19 +221,19 @@ const {students, mentors, instructors} = obj
 //   return num1 + num2;
 // }
 
-// REPLACE THIS WITH YOUR CODE
+const add = (num1, num2) => num1 + num2
 
 // function subtract(num1, num2) {
 //   return num1 - num2;
 // }
 
-// REPLACE THIS WITH YOUR CODE
+const subtract = (num1, num2) => num1-num2
 
 // function double(num) {
 //   return num * 2;
 // }
 
-// REPLACE THIS WITH YOUR CODE
+const double = num => num * 2
 
 /// /////// PROBLEM 15 //////////
 
@@ -227,7 +244,7 @@ const {students, mentors, instructors} = obj
 // You should not use the ES5 function declaration or function expression syntax in your
 // final solution.
 
-// REPLACE THIS WITH YOUR CODE
+const multiply = (num1, num2) => num1 * num2
 
 /// /////// PROBLEM 16 //////////
 
@@ -238,7 +255,7 @@ const {students, mentors, instructors} = obj
 // You should not use the ES5 function declaration or function expression syntax in your
 // final solution.
 
-// REPLACE THIS WITH YOUR CODE
+const concatenate = (str1, str2) => str1 + str2
 
 /// /////// PROBLEM 17 //////////
 
@@ -250,7 +267,9 @@ const {students, mentors, instructors} = obj
 // You should not use the ES5 function declaration or function expression syntax in your
 // final solution.
 
-// REPLACE THIS WITH YOUR CODE
+const gemInfo = (gemType, gemSize, gemWeight) => {
+  return {gemType, gemSize, gemWeight}
+}
 
 /// /////// PROBLEM 18 //////////
 
@@ -267,9 +286,10 @@ const {students, mentors, instructors} = obj
 
 // Do not edit the code below.
 const jobs = [{ receptionist: 'James' }, { programmer: 'Steve' }, { designer: 'Alicia' }];
+const jobs2 = [{ programmer: 'James' }, { receptionist: 'Steve' }, { designer: 'Alicia' }];
 // Do not edit the code above.
 
-// REPLACE THIS WITH YOUR CODE
+const identifier = (arr) => arr.filter(e => e.programmer)[0]
 
 /// /////// PROBLEM 19 //////////
 
@@ -283,7 +303,7 @@ const jobs = [{ receptionist: 'James' }, { programmer: 'Steve' }, { designer: 'A
 // final solution.
 // You should not use a for loop, but should use the filter method instead.
 
-// REPLACE THIS WITH YOUR CODE
+const evens = arr => arr.filter(e => e % 2 === 0)
 
 /// /////// PROBLEM 20 //////////
 
@@ -299,7 +319,7 @@ const jobs = [{ receptionist: 'James' }, { programmer: 'Steve' }, { designer: 'A
 // final solution.
 // You should not use a for loop, but should use the filter method instead.
 
-// REPLACE THIS WITH YOUR CODE
+const startWithLetterA = arr => arr.filter(e => e.toLowerCase().startsWith('a'))
 
 /// /////// PROBLEM 21 //////////
 
@@ -308,7 +328,7 @@ const jobs = [{ receptionist: 'James' }, { programmer: 'Steve' }, { designer: 'A
 // each name.
 // Make sure to use arrow functions combined with the map method.
 
-// REPLACE THIS WITH YOUR CODE
+const formalGreeting = names => names.map(e => 'Hello, ' + e)
 
 /// /////// PROBLEM 22 //////////
 
@@ -316,4 +336,4 @@ const jobs = [{ receptionist: 'James' }, { programmer: 'Steve' }, { designer: 'A
 // numbers parameter and return the product of all the numbers in the array.
 // Make sure to use arrow functions combined with the reduce method.
 
-// REPLACE THIS WITH YOUR CODE
+const productOfArray = numbers => numbers.reduce((a,e) => a * e)
